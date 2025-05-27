@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:laboratorio04/app/view/home/home_screen.dart';
 import 'package:laboratorio04/app/view/task_list/task_list_page.dart';
+import 'package:laboratorio04/app/view/uso_de_supabase/gestion_productos_supabase.dart';
 import 'second_page.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -91,6 +92,20 @@ class WelcomePage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const HomeScreen()),
                   ),
                 ),
+                
+                const SizedBox(height: 20),
+
+                _buildWideButton(
+                    context,
+                    icon: Icons.shopping_cart,
+                    label: 'Ir a Gestión de Productos (directo)',
+                    color: Colors.green,
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => GestionProductosSupabase()),
+                    ),
+                  ),
+
 
                 const SizedBox(height: 60),
                 const Text(
