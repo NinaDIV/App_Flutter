@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:laboratorio04/app/view/login_page.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:laboratorio04/app/model/task.dart';
+import 'package:laboratorio04/app/view/login_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
 
-  Hive.registerAdapter(TaskAdapter()); // Asegúrate que esté generado
-  await Hive.openBox<Task>('tasks');   // Abre tu caja
+  // Inicializa Hive
+  await Hive.initFlutter();
+  Hive.registerAdapter(TaskAdapter());
+  await Hive.openBox<Task>('tasks');
+
+  // Inicializa Supabase
+  await Supabase.initialize(
+    url: 'https://tu-url.supabase.co', // 🔁 Reemplaza con tu URL real
+    anonKey: 'tu-clave-anonima',       // 🔁 Reemplaza con tu clave real
+  );
 
   runApp(const MyApp());
 }
@@ -22,12 +30,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Poppins', // Usa tu fuente personalizada
+        fontFamily: 'Poppins',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
         useMaterial3: true,
       ),
-      home: const LoginPage(), // Puedes cambiar por TaskListPage si quieres empezar allí
+      home: const LoginPage(), // Página inicial
     );
   }
 }
-   
