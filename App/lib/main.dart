@@ -14,8 +14,8 @@ void main() async {
 
   // Inicializa Supabase
   await Supabase.initialize(
-    url: 'https://tu-url.supabase.co', // 🔁 Reemplaza con tu URL real
-    anonKey: 'tu-clave-anonima',       // 🔁 Reemplaza con tu clave real
+    url: 'https://ehldtwglpgofukwirpum.supabase.co', // 🔁 Reemplaza con tu URL real
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVobGR0d2dscGdvZnVrd2lycHVtIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0ODM2NTk2MywiZXhwIjoyMDYzOTQxOTYzfQ.vjXvdEnA0779H4NYM9gpTP9QPSGf2VTLm-dZ9ADCQAE',       // 🔁 Reemplaza con tu clave real
   );
 
   runApp(const MyApp());
