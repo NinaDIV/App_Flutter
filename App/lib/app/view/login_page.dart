@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'welcome_page.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  final FlutterLocalNotificationsPlugin notificationsPlugin;
+  
+  const LoginPage({super.key, required this.notificationsPlugin});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -19,9 +22,13 @@ class _LoginPageState extends State<LoginPage> {
 
   void validarLogin() {
     if (userController.text == username && passController.text == password) {
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const WelcomePage()),
+        MaterialPageRoute(
+          builder: (context) => WelcomePage(
+            notificationsPlugin: widget.notificationsPlugin,
+          ),
+        ),
       );
     } else {
       setState(() {

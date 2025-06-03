@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:laboratorio04/app/view/Notificaciones/notificacion.dart';
 import 'package:laboratorio04/app/view/home/home_screen.dart';
 import 'package:laboratorio04/app/view/task_list/task_list_page.dart';
 import 'package:laboratorio04/app/view/uso_de_supabase/gestion_productos_supabase.dart';
 import 'second_page.dart';
 
 class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key});
+  
+  final FlutterLocalNotificationsPlugin notificationsPlugin;
+
+  const WelcomePage({super.key, required this.notificationsPlugin});
+
+
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -105,6 +114,26 @@ class WelcomePage extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => GestionProductosSupabase()),
                     ),
                   ),
+
+                  const SizedBox(height: 20),
+
+
+                       // Agrega este nuevo botón para notificaciones
+                _buildWideButton(
+                  context,
+                  icon: Icons.notifications,
+                  label: 'Notificaciones Locales',
+                  color: Colors.indigo,
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => NotificationPage(
+                        notificationsPlugin: notificationsPlugin,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
 
 
                 const SizedBox(height: 60),
