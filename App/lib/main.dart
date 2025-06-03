@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:laboratorio04/app/model/task.dart';
@@ -18,11 +19,25 @@ void main() async {
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVobGR0d2dscGdvZnVrd2lycHVtIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0ODM2NTk2MywiZXhwIjoyMDYzOTQxOTYzfQ.vjXvdEnA0779H4NYM9gpTP9QPSGf2VTLm-dZ9ADCQAE',       // 🔁 Reemplaza con tu clave real
   );
 
-  runApp(const MyApp());
+   // Inicializa notificaciones locales
+  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = 
+      FlutterLocalNotificationsPlugin();
+  const AndroidInitializationSettings initializationSettingsAndroid =
+      AndroidInitializationSettings('@mipmap/ic_launcher');
+  final InitializationSettings initializationSettings = InitializationSettings(
+    android: initializationSettingsAndroid,
+  );
+  await flutterLocalNotificationsPlugin.initialize(initializationSettings);
+
+  runApp(MyApp(notificationsPlugin: flutterLocalNotificationsPlugin));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+
+  final FlutterLocalNotificationsPlugin notificationsPlugin;
+
+  const MyApp({super.key, required this.notificationsPlugin});
+
 
   @override
   Widget build(BuildContext context) {
