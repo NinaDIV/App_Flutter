@@ -4,6 +4,8 @@ import 'package:laboratorio04/app/services/api_service.dart';
  
 
 class UserListScreen extends StatefulWidget {
+  const UserListScreen({super.key});
+
   @override
   _UserListScreenState createState() => _UserListScreenState();
 }

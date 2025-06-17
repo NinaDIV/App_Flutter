@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class GestionProductosSupabase extends StatefulWidget {
+  const GestionProductosSupabase({super.key});
+
   @override
   _ProductosScreenState createState() => _ProductosScreenState();
 }

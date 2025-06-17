@@ -339,9 +339,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    _buildInfoItem(Icons.attach_money, 'Precio', '${producto.precio.toStringAsFixed(2)}'),
+                                    _buildInfoItem(Icons.attach_money, 'Precio', producto.precio.toStringAsFixed(2)),
                                     _buildInfoItem(Icons.format_list_numbered, 'Cantidad', '${producto.cantidad}'),
-                                    _buildInfoItem(Icons.shopping_cart_checkout, 'Subtotal', '${subtotal.toStringAsFixed(2)}'),
+                                    _buildInfoItem(Icons.shopping_cart_checkout, 'Subtotal', subtotal.toStringAsFixed(2)),
                                   ],
                                 ),
                               ],
@@ -402,7 +402,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: Text(
-                            '${granTotal.toStringAsFixed(2)}',
+                            granTotal.toStringAsFixed(2),
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,

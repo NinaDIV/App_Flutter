@@ -18,12 +18,10 @@ class _TaskListPageState extends State<TaskListPage> {
     primary: Color(0xFF4CAF50),         // Green primary
     secondary: Color(0xFF8BC34A),       // Light green accent
     surface: Colors.white,
-    background: Color(0xFFF5F5F5),
     error: Color(0xFFE53935),           // Red for errors/delete
     onPrimary: Colors.white,
     onSecondary: Colors.black,
-    onSurface: Color(0xFF212121),       // Dark text on light backgrounds
-    onBackground: Color(0xFF212121),
+    onSurface: Color(0xFF212121),
     onError: Colors.white,
     brightness: Brightness.light,
   );
@@ -55,7 +53,7 @@ class _TaskListPageState extends State<TaskListPage> {
   // Toggle task status
   void _toggleTaskStatus(int index) {
     final task = taskBox.getAt(index);
-    task?.isDone = !(task?.isDone ?? false);
+    task?.isDone = !(task.isDone ?? false);
     task?.save();
     setState(() {});
   }
