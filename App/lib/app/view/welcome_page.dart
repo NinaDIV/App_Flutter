@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:laboratorio04/app/view/Api/user_list_screen.dart';
 import 'package:laboratorio04/app/view/Notificaciones/notificacion.dart';
 import 'package:laboratorio04/app/view/home/home_screen.dart';
 import 'package:laboratorio04/app/view/task_list/task_list_page.dart';
@@ -134,6 +135,19 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
+
+                
+
+                  _buildWideButton(
+                    context,
+                    icon: Icons.people,
+                    label: 'Lista de Usuarios (API)',
+                    color: Colors.blueAccent,
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => UserListScreen()),
+                    ),
+                  ),
 
 
                 const SizedBox(height: 60),
