@@ -6,6 +6,15 @@ class NotificationPage extends StatelessWidget {
 
   const NotificationPage({super.key, required this.notificationsPlugin});
 
+  Future<void> _requestNotificationPermissions() async {
+    final androidImplementation = notificationsPlugin
+        .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
+    
+    if (androidImplementation != null) {
+      await androidImplementation.requestNotificationsPermission();
+    }
+  }
+
   Future<void> _showNotification(String title, String body) async {
     const AndroidNotificationDetails androidDetails =
         AndroidNotificationDetails(
@@ -14,6 +23,7 @@ class NotificationPage extends StatelessWidget {
       channelDescription: 'Canal de prueba',
       importance: Importance.max,
       priority: Priority.high,
+      showWhen: false,
     );
 
     const NotificationDetails notificationDetails = NotificationDetails(
@@ -23,7 +33,10 @@ class NotificationPage extends StatelessWidget {
     await notificationsPlugin.show(0, title, body, notificationDetails);
   }
 
-  void _openNotificationDialog(BuildContext context) {
+  void _openNotificationDialog(BuildContext context) async {
+    // Solicita permiso antes de mostrar el diálogo
+    await _requestNotificationPermissions();
+    
     final TextEditingController titleController = TextEditingController();
     final TextEditingController bodyController = TextEditingController();
 
@@ -37,11 +50,13 @@ class NotificationPage extends StatelessWidget {
             children: [
               TextField(
                 controller: titleController,
-                decoration: const InputDecoration(labelText: 'Titulo'),
+                decoration: const InputDecoration(labelText: 'Título'),
               ),
+              const SizedBox(height: 10),
               TextField(
                 controller: bodyController,
                 decoration: const InputDecoration(labelText: 'Mensaje'),
+                maxLines: 3,
               ),
             ],
           ),
@@ -52,11 +67,24 @@ class NotificationPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                final title = titleController.text;
-                final body = bodyController.text;
+                final title = titleController.text.trim();
+                final body = bodyController.text.trim();
                 if (title.isNotEmpty && body.isNotEmpty) {
                   _showNotification(title, body);
                   Navigator.pop(context);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Notificación enviada'),
+                      duration: Duration(seconds: 2),
+                    ),
+                  );
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Por favor completa todos los campos'),
+                      backgroundColor: Colors.red,
+                    ),
+                  );
                 }
               },
               child: const Text('Enviar'),
@@ -73,15 +101,56 @@ class NotificationPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Notificaciones'),
         backgroundColor: Colors.teal,
+        foregroundColor: Colors.white,
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () => _openNotificationDialog(context),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.teal,
-            foregroundColor: Colors.white,
-          ),
-          child: const Text('Crear Notificación'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(
+              Icons.notifications_active,
+              size: 80,
+              color: Colors.teal,
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'Notificaciones Locales',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.teal,
+              ),
+            ),
+            const SizedBox(height: 10),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 40),
+              child: Text(
+                'Crea notificaciones personalizadas que aparecerán en tu dispositivo',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                ),
+              ),
+            ),
+            const SizedBox(height: 40),
+            ElevatedButton.icon(
+              onPressed: () => _openNotificationDialog(context),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.teal,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              icon: const Icon(Icons.add_alert),
+              label: const Text(
+                'Crear Notificación',
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
+          ],
         ),
       ),
     );

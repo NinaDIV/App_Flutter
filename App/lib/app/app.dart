@@ -1,5 +1,6 @@
+import 'package:MULTIAPP/app/view/splash/splash_page.dart';
 import 'package:flutter/material.dart';
-import 'package:laboratorio04/app/view/splash/splash_page.dart';
+ 
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
