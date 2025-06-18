@@ -1,5 +1,6 @@
- import 'package:flutter/material.dart';
-import 'package:laboratorio04/app/model/product.dart';
+ import 'package:MULTIAPP/app/model/product.dart';
+import 'package:flutter/material.dart';
+ 
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeScreen extends StatefulWidget {

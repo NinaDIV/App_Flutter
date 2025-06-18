@@ -1,6 +1,6 @@
+import 'package:MULTIAPP/app/model/user.dart';
+import 'package:MULTIAPP/app/services/api_service.dart';
 import 'package:flutter/material.dart';
-import 'package:laboratorio04/app/model/user.dart';
-import 'package:laboratorio04/app/services/api_service.dart';
  
 
 class UserListScreen extends StatefulWidget {

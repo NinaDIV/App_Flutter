@@ -1,7 +1,8 @@
+import 'package:MULTIAPP/app/view/components/h1.dart';
+import 'package:MULTIAPP/app/view/components/shape.dart';
+import 'package:MULTIAPP/app/view/task_list/task_list_page.dart';
 import 'package:flutter/material.dart';
-import 'package:laboratorio04/app/view/components/h1.dart';
-import 'package:laboratorio04/app/view/components/shape.dart';
-import 'package:laboratorio04/app/view/task_list/task_list_page.dart'; // Asegúrate de importar tu TaskListPage
+ // Asegúrate de importar tu TaskListPage
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
