@@ -4,7 +4,7 @@
 
   # 📱 OmniManager
   
-  **Tu suite administrativa todo-en-uno con el poder de Flutter & Supabase**
+  **Suite administrativa todo-en-uno con el poder de Flutter & Supabase**
 
 <p align="center">
   <a href="https://flutter.dev/">
