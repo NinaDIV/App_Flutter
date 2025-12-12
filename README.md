@@ -32,12 +32,12 @@
 
 | 🔐 Seguridad y Acceso | 📝 Gestión de Tareas |
 |:---------------------:|:-------------------:|
-| <img src="https://skillicons.dev/icons?i=flutter" width="30" /> <img src="https://skillicons.dev/icons?i=dart" width="30" /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/login.png?raw=true" width="250" /> | <img src="https://skillicons.dev/icons?i=hive" width="30" /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/Tareas.png?raw=true" width="250" /> |
+| <img src="https://skillicons.dev/icons?i=flutter" width="30" /> <img src="https://skillicons.dev/icons?i=dart" width="30" /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/logi.png" width="250" /> | <img src="https://skillicons.dev/icons?i=hive" width="30" /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/task.png?raw=true" width="250" /> |
 | **Login moderno:** Validación y diseño limpio. | **Dashboard interactivo:** Gráficos de progreso en tiempo real y persistencia local. |
 
 | ☁️ Inventario | 🔔 Notificaciones y API |
 |:-------------:|:----------------------:|
-| <img /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/Inventario.png?raw=true" width="250" /> | <img  /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/noti.jpg?raw=true" width="250" /> |
+| <img /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/Inventario.png?raw=true" width="250" /> | <img  /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/noti.png?raw=true" width="250" /> |
 | **Sincronización Cloud:** CRUD de productos instantáneo. | **Alertas Locales** y consumo de APIs externas. |
 
 ---
