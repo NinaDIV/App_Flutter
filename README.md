@@ -1,20 +1,19 @@
-<div align="center">
-
-  <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/logo.png?raw=true" alt="Logo" width="100" height="100">
-
-  # 📱 OmniManager
-  
-
  
-| 🔐 Seguridad y Acceso | 📝 Gestión de Tareas |
-|:---------------------:|:-------------------:|
-| <img src="https://skillicons.dev/icons?i=flutter" width="30" /> <img src="https://skillicons.dev/icons?i=dart" width="30" /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/logi.png" width="250" /> | <img src="https://skillicons.dev/icons?i=hive" width="30" /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/task.png?raw=true" width="250" /> |
-| **Login moderno:** Validación y diseño limpio. | **Dashboard interactivo:** Gráficos de progreso en tiempo real y persistencia local. |
+<p align="center">
+  <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/logo.png?raw=true" alt="Logo" width="100" height="100">
+</p>
 
-| ☁️ Inventario | 🔔 Notificaciones y API |
-|:-------------:|:----------------------:|
-| <img /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/Inventario.png?raw=true" width="250" /> | <img  /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/noti.png?raw=true" width="250" /> |
-| **Sincronización Cloud:** CRUD de productos instantáneo. | **Alertas Locales** y consumo de APIs externas. |
+<h1 align="center">📱 OmniManager</h1>
+
+  | 🔐 Seguridad y Acceso | 📝 Gestión de Tareas |
+  |:---------------------:|:-------------------:|
+  |  <br> <img   src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/logi.png" width="250" /> | <img   src="https://skillicons.dev/icons?i=hive" width="30" /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/task.png?raw=true" width="250" /> |
+  | **Login moderno:** Validación y diseño limpio. | **Dashboard interactivo:** Gráficos de progreso en tiempo real y persistencia local. |
+  
+  | ☁️ Inventario | 🔔 Notificaciones y API |
+  |:-------------:|:----------------------:|
+  | <img /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/Inventario.png?raw=true" width="250" /> | <img  /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/noti.png?raw=true" width="250" /> |
+  | **Sincronización Cloud:** CRUD de productos instantáneo. | **Alertas Locales** y consumo de APIs externas. |
 
 ---
 
@@ -56,6 +55,6 @@ Para probar la aplicación en modo administrador:
 
 ---
 
-<div align="center">
-  <sub>Desarrollado con ❤️ usando Flutter</sub>
-</div>
+
+ 
+
