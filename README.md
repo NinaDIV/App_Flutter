@@ -4,32 +4,8 @@
 
   # 📱 OmniManager
   
-  **Suite administrativa todo-en-uno con el poder de Flutter & Supabase**
 
-<p align="center">
-  <a href="https://flutter.dev/">
-    <img src="https://skillicons.dev/icons?i=flutter" alt="Flutter" width="60" />
-  </a>
-  <a href="https://dart.dev/">
-    <img src="https://skillicons.dev/icons?i=dart" alt="Dart" width="60" />
-  </a>
-  <a href="https://supabase.com/">
-    <img src="https://skillicons.dev/icons?i=supabase" alt="Supabase" width="60" />
-  </a>
-  <a href="https://hivedb.dev/">
-    <img src="https://skillicons.dev/icons?i=hive" alt="Hive" width="60" />
-  </a>
-</p>
-
-
-</div>
-
-<br />
-
----
-
-## 🎨 Galería y Demostración
-
+ 
 | 🔐 Seguridad y Acceso | 📝 Gestión de Tareas |
 |:---------------------:|:-------------------:|
 | <img src="https://skillicons.dev/icons?i=flutter" width="30" /> <img src="https://skillicons.dev/icons?i=dart" width="30" /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/logi.png" width="250" /> | <img src="https://skillicons.dev/icons?i=hive" width="30" /> <br> <img src="https://github.com/NinaDIV/App_Flutter/blob/main/Galeria/task.png?raw=true" width="250" /> |
